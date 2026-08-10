@@ -1,0 +1,9 @@
+Copyright (c) 2026 the Humanizer author. All rights reserved.
+
+The skill source (SKILL.md, reference documents, and scripts) is NOT covered by an open
+licence and is not published in this repository. It lives in the private companion
+repository `Humanizer-core`; access is by invitation.
+
+This repository contains methodology, aggregate measurements, and figures. Those are
+licensed as stated in LICENSE-DATA. Nothing here grants a licence to the underlying
+papers: the corpus is described by identifier and never redistributed.
