@@ -4,7 +4,7 @@
 造成的，并给出对应的改写处方。
 
 本仓库存放方法学、训练出的模型系数、实测参考带、完整训练记录与图表。skill 源码在私有配套仓库
-`Humanizer-core`。
+`humanizer_claude-core`。
 
 ![训练曲线与早停](docs/media/overfitting-curve.png)
 

@@ -6,7 +6,7 @@ and prescribes the rewrite.
 
 This repository holds the methodology, the trained model coefficients, the measured reference
 bands, the training record, and the figures. The skill source lives in a private companion
-repository, `Humanizer-core`.
+repository, `humanizer_claude-core`.
 
 ![training curves and early stopping](docs/media/overfitting-curve.png)
 
