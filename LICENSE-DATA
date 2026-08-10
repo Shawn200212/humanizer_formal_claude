@@ -1,0 +1,9 @@
+The contents of `data/` and `docs/media/` — the trained model coefficients, the human
+reference bands, the training histories, the corpus manifests, and the figures — are
+released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+The papers those measurements were derived from are NOT redistributed here. The English
+corpus is identified by arXiv id and the Chinese corpus by journal and article number, so
+the corpus is reproducible by anyone with access to the same open-access sources; the
+full text of those papers remains under its publishers' terms.

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Humanizer: a bilingual interpretable model for repairing AI-drafted academic prose"
+message: "If you use the measurements in data/, please cite this repository."
+type: software
+abstract: >-
+  A Claude Code skill that measures how far a passage of academic prose sits from published
+  human writing, in Chinese and in English, and prescribes the rewrite. The model is a
+  generalised additive model over 45-48 interpretable stylometric features, trained on 200
+  matched human/LLM document pairs built from papers published before the release of ChatGPT.
+  Includes the measured false-positive rate on held-out published papers, the confounds that
+  were controlled rather than exploited, and the full early-stopping record.
+keywords:
+  - academic writing
+  - stylometry
+  - AI text detection
+  - Chinese academic prose
+  - calibration
+  - agent skills
+license: CC-BY-4.0
+date-released: "2026-08-10"

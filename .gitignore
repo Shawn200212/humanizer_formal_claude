@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.pdf
+raw_en/
+raw_zh/
+text_en/
+text_zh/
+machine_en/
+machine_en2/
+machine_zh/
+machine_zh2/
