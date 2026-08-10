@@ -32,7 +32,7 @@ Implemented in numpy. No torch, no scikit-learn, no network, no text leaves the 
   sight of the human text.
 
 **It is not evidence of authorship.** On held-out data, **9.8% of windows from real published
-English papers and 4.6% from real published Chinese papers score above 0.5.** One high window
+English papers and 4.2% from real published Chinese papers score above 0.5.** One high window
 proves nothing. There is no such quantity as an "AI percentage".
 
 ## Results
@@ -41,12 +41,12 @@ proves nothing. There is no such quantity as an "AI percentage".
 |---|---|---|
 | Human papers | 100 (8 venue families) | 100 (软件学报 53, 计算机系统应用 47) |
 | Features | 45 | 48 |
-| Windows (train / val / test), human+machine | 720+789 / 240+264 / 240+267 | 711+770 / 238+264 / 237+267 |
-| Rounds trained → kept | 900 → **163** | 900 → **138** |
-| Validation argmin | 499 | 387 |
+| Windows (train / val / test), human+machine | 720+789 / 240+264 / 240+267 | 711+765 / 238+262 / 237+264 |
+| Rounds trained → kept | 900 → **163** | 900 → **120** |
+| Validation argmin | 499 | 375 |
 | Held-out test AUC | **0.994** | **0.998** |
-| Test accuracy | 0.955 | 0.966 |
-| Human false-positive floor | 9.8% | 4.6% |
+| Test accuracy | 0.955 | 0.970 |
+| Human false-positive floor | 9.8% | 4.2% |
 
 Full record, including the capacity sweep and per-feature contributions:
 [`docs/TRAINING-REPORT.md`](docs/TRAINING-REPORT.md).
@@ -55,9 +55,9 @@ Full record, including the capacity sweep and per-feature contributions:
 
 Training runs 900 rounds on purpose — far past the point of usefulness — so the stopping round
 is *measured* rather than asserted. The validation curve reaches its minimum at round 499
-(English) / 387 (Chinese) and rises afterwards.
+(English) / 375 (Chinese) and rises afterwards.
 
-The shipped model is nevertheless **round 163 / 138**: the first round whose validation loss
+The shipped model is nevertheless **round 163 / 120**: the first round whose validation loss
 falls inside **one standard error** of the minimum. Taking the exact argmin selects on
 validation noise, and this corpus shows exactly why — an earlier Chinese run left to find its
 argmin kept "improving" in the fourth decimal for another 1,700 rounds while its **held-out
