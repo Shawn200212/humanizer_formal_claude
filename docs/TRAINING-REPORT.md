@@ -109,53 +109,53 @@ Top features by total contribution:
 
 ### Chinese
 
-- Windows: train 711+770, val 238+264, test 237+267 (human+machine).
+- Windows: train 711+765, val 238+262, test 237+264 (human+machine).
 - Features: 48 (features.py v3).
-- Trained 900 rounds at lr 0.2; **early stop at round 138**.
-- Stop reason: validation loss reached its minimum at round 387 and rose afterwards; stopped at 138, the first round within one standard error (0.0157) of it.
+- Trained 900 rounds at lr 0.2; **early stop at round 120**.
+- Stop reason: validation loss reached its minimum at round 375 and rose afterwards; stopped at 120, the first round within one standard error (0.0166) of it.
 
 | split | logloss | AUC | accuracy |
 |---|---|---|---|
-| train | 0.0191 | 1.0000 | 0.9973 |
-| val | 0.0661 | 0.9966 | 0.9741 |
-| test | 0.0814 | 0.9980 | 0.9663 |
+| train | 0.0224 | 1.0000 | 0.9973 |
+| val | 0.0681 | 0.9965 | 0.9780 |
+| test | 0.0808 | 0.9981 | 0.9701 |
 
-On the held-out test split the model classifies 93.7% of human windows as human and 99.3% of machine windows as machine.
+On the held-out test split the model classifies 94.5% of human windows as human and 99.2% of machine windows as machine.
 
 Reference band, measured on **held-out** human windows (val + test), never the fitted ones:
 
 | | median | p90 | p99 | share > 0.5 |
 |---|---|---|---|---|
-| human (held out, n=475) | 0.009 | 0.226 | 0.683 | 4.6% |
-| machine (held out, n=531) | 0.996 | 0.999 | 1.000 | 98.5% |
+| human (held out, n=475) | 0.011 | 0.238 | 0.699 | 4.2% |
+| machine (held out, n=526) | 0.995 | 0.999 | 1.000 | 98.9% |
 
-**The false-positive floor is 4.6%** — that share of windows from real published Chinese papers scores above 0.5. One high window proves nothing.
+**The false-positive floor is 4.2%** — that share of windows from real published Chinese papers scores above 0.5. One high window proves nothing.
 
 Capacity sweep — the same data at four capacities, showing where each turns:
 
 | configuration | best round | best val logloss | final train | final val |
 |---|---|---|---|---|
-| lr .30 depth2 | 82 | 0.0456 | 0.0002 | 0.0495 |
-| lr .20 depth1 | 387 | 0.0505 | 0.0038 | 0.0511 |
-| lr .10 depth1 | 396 | 0.0559 | 0.0120 | 0.0563 |
-| lr .05 depth1 | 400 | 0.0767 | 0.0300 | 0.0767 |
+| lr .30 depth2 | 65 | 0.0521 | 0.0001 | 0.0644 |
+| lr .20 depth1 | 375 | 0.0516 | 0.0035 | 0.0524 |
+| lr .10 depth1 | 388 | 0.0572 | 0.0115 | 0.0577 |
+| lr .05 depth1 | 400 | 0.0750 | 0.0295 | 0.0750 |
 
 Top features by total contribution:
 
 | feature | contribution | human mean | machine mean | machine side |
 |---|---|---|---|---|
-| `rare_token_share` | 4.99 | 0.418 | 0.569 | high |
-| `ttr` | 4.83 | 0.722 | 0.871 | high |
-| `first_person_per_1k` | 2.21 | 2.462 | 3.925 | high |
-| `light_verb_per_1k` | 2.00 | 6.789 | 1.850 | low |
-| `sent_len_cv` | 1.82 | 0.591 | 0.446 | low |
-| `number_unit_per_1k` | 1.63 | 1.951 | 6.170 | high |
-| `adverb_ly_per_1k` | 1.16 | 1.580 | 0.931 | low |
-| `four_char_rate` | 1.07 | 8.482 | 5.130 | low |
-| `clause_cv` | 0.96 | 0.839 | 0.673 | low |
-| `digit_per_1k` | 0.93 | 46.527 | 35.291 | low |
-| `de_rate` | 0.61 | 49.588 | 37.568 | low |
-| `semicolon_per_1k` | 0.59 | 2.165 | 3.007 | high |
+| `rare_token_share` | 4.98 | 0.418 | 0.570 | high |
+| `ttr` | 4.76 | 0.722 | 0.871 | high |
+| `first_person_per_1k` | 1.95 | 2.462 | 3.933 | high |
+| `light_verb_per_1k` | 1.88 | 6.789 | 1.821 | low |
+| `sent_len_cv` | 1.68 | 0.591 | 0.445 | low |
+| `number_unit_per_1k` | 1.58 | 1.951 | 6.200 | high |
+| `adverb_ly_per_1k` | 0.99 | 1.580 | 0.921 | low |
+| `four_char_rate` | 0.95 | 8.482 | 5.147 | low |
+| `digit_per_1k` | 0.95 | 46.527 | 35.480 | low |
+| `clause_cv` | 0.92 | 0.839 | 0.670 | low |
+| `semicolon_per_1k` | 0.58 | 2.165 | 3.067 | high |
+| `contrast_per_1k` | 0.49 | 0.871 | 0.310 | low |
 
 ## Figures
 

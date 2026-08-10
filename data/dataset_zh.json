@@ -1,7 +1,7 @@
 {
  "lang": "zh",
  "features_version": 3,
- "n_windows": 2487,
+ "n_windows": 2477,
  "n_features": 48,
  "feature_names": [
   "adverb_ly_per_1k",
@@ -158,15 +158,15 @@
  "counts": {
   "train": {
    "human": 711,
-   "machine": 770
+   "machine": 765
   },
   "val": {
    "human": 238,
-   "machine": 264
+   "machine": 262
   },
   "test": {
    "human": 237,
-   "machine": 267
+   "machine": 264
   }
  },
  "vocab_size": 4000,
