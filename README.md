@@ -1,5 +1,7 @@
 # Humanizer
 
+**English** | [中文](README.zh-CN.md)
+
 A bilingual (中文 / English) instrument for **repairing AI-drafted academic prose**: it measures
 how far each passage sits from published human writing, names the exact features responsible,
 and prescribes the rewrite.
