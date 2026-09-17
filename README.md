@@ -8,7 +8,13 @@ and prescribes the rewrite.
 
 This repository holds the methodology, the trained model coefficients, the measured reference
 bands, the training record, and the figures. The skill source lives in a private companion
-repository, `humanizer_claude-core`.
+repository, `humanizer_formal_claude-core`.
+
+> **2026-09-17.** The skill is now named `humanizer-formal` and handles academic manuscripts only;
+> this repository was `humanizer_claude` (GitHub redirects the old URL). Everyday prose is a separate
+> skill, `humanizer-informal`, with no model behind it. The model, the bands and every figure below
+> are unchanged. The repair protocol gained one mechanical step: a before/after check that every
+> number, statistic, citation and quoted string survived the rewrite.
 
 ![training curves and early stopping](docs/media/overfitting-curve.png)
 

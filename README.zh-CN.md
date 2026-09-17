@@ -6,7 +6,11 @@
 造成的，并给出对应的改写处方。
 
 本仓库存放方法学、训练出的模型系数、实测参考带、完整训练记录与图表。skill 源码在私有配套仓库
-`humanizer_claude-core`。
+`humanizer_formal_claude-core`。
+
+> **2026-09-17：** skill 现名 `humanizer-formal`，只处理学术稿件；本仓库原名 `humanizer_claude`（旧链接由 GitHub 自动跳转）。
+> 日常文字另有独立的 `humanizer-informal`，不带模型。模型、参考带与下文所有数字均未改动；
+> 修复流程新增一步机械校验：改写前后逐项比对数字、统计量、引用与引文是否完整保留。
 
 ![训练曲线与早停](docs/media/overfitting-curve.png)
 
