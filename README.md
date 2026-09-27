@@ -298,5 +298,3 @@ Measurements, models and figures in `data/` and `docs/media/`: CC BY 4.0, see
 
 skill 源码不在此发布，见 [`LICENSE`](LICENSE)。
 `data/` 与 `docs/media/` 下的测量结果、模型与图表按 CC BY 4.0 发布，见 [`LICENSE-DATA`](LICENSE-DATA)。
-
-[English](README.md)
