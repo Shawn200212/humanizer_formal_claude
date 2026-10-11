@@ -2,7 +2,7 @@
 
 **English**
 
-A bilingual (中文 / English) instrument for **repairing AI-drafted academic prose**: it measures
+A bilingual (Chinese / English) instrument for **repairing AI-drafted academic prose**: it measures
 how far each passage sits from published human writing, names the exact features responsible,
 and prescribes the rewrite.
 
@@ -86,7 +86,7 @@ proves nothing. There is no such quantity as an "AI percentage".
 
 | | English | Chinese |
 |---|---|---|
-| Human papers | 100 (8 venue families) | 100 (软件学报 53, 计算机系统应用 47) |
+| Human papers | 100 (8 venue families) | 100 (Journal of Software 53, Computer Systems & Applications 47) |
 | Features | 45 | 48 |
 | Windows (train / val / test), human+machine | 720+789 / 240+264 / 240+267 | 711+765 / 238+262 / 237+264 |
 | Rounds trained → kept | 900 → **163** | 900 → **120** |
@@ -195,7 +195,7 @@ Top features by total contribution, with the direction measured on the training 
 `sent_len_skew`, `sent_initial_connective_rate`.
 
 **Chinese** — `rare_token_share`, `ttr`, `first_person_per_1k`, `light_verb_per_1k`
-(进行 / 实现 / 具有), `sent_len_cv`, `number_unit_per_1k`, `four_char_rate`.
+(the light verbs 进行 / 实现 / 具有, "carry out / realise / possess"), `sent_len_cv`, `number_unit_per_1k`, `four_char_rate`.
 
 Two results run against the folk account of "AI writing":
 
@@ -234,7 +234,7 @@ Papers are identified, never redistributed.
   from an acceptance statement in the author comment), spanning HCI, NLP, CV, ML, IR/DM,
   systems/SE, security, and robotics/graphics. All v1 before 2022-11-30.
 - **Chinese** — 100 papers from two open-access journals, 2019–2021 issues only:
-  软件学报 (Journal of Software, CCF-A 中文期刊) and 计算机系统应用.
+  软件学报 (Journal of Software, a CCF-A Chinese-language journal) and 计算机系统应用 (Computer Systems & Applications).
   **CNKI and Wanfang were not touched**: their full text is licensed, and scraping it would
   breach that licence regardless of technical feasibility.
 

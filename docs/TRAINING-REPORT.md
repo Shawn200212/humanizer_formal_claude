@@ -18,7 +18,7 @@ passages on the same titles, produced without sight of the human text.
 
 ### Chinese
 
-- 100 papers: 53 from 软件学报 (Journal of Software, CCF-A 中文期刊), 47 from 计算机系统应用 (Computer Systems & Applications).
+- 100 papers: 53 from 软件学报 (Journal of Software, a CCF-A Chinese-language journal), 47 from 计算机系统应用 (Computer Systems & Applications).
 - Issues restricted to 2019-2021 (pre-ChatGPT).
 - Sources limited to journals that publish full text openly. CNKI and Wanfang were not
   touched: their full text is licensed and scraping it would breach that licence.
