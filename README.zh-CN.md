@@ -1,6 +1,8 @@
-# Humanizer
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-[English](README.md) | **中文**
+<a id="humanizer"></a>
+
+# Humanizer
 
 一个中英双语的**AI 论文文本修复**仪器：测量每一段落离已发表人类学术散文有多远，指出**具体是哪些特征**
 造成的，并给出对应的改写处方。
@@ -16,6 +18,10 @@
 
 ---
 
+<a id="what-it-is--它是什么"></a>
+<a id="what-it-is"></a>
+<a id="它是什么"></a>
+
 ## 它是什么
 
 一个**广义可加模型**（GAM）——逻辑损失下提升的深度 1 决策树桩——建立在 45 个（英文）/ 48 个（中文）
@@ -23,6 +29,10 @@
 分解到产生它的那些特征上。这是"告诉你该改什么"能够成立、而不只是听起来像回事的唯一理由。
 
 纯 numpy 实现。不需要 torch，不需要 scikit-learn，不联网，文本不出本机。
+
+<a id="what-it-measures-and-what-it-does-not--它测量什么不测量什么"></a>
+<a id="what-it-measures-and-what-it-does-not"></a>
+<a id="它测量什么不测量什么"></a>
 
 ## 它测量什么，不测量什么
 
@@ -33,6 +43,10 @@
 
 **它不是作者身份的证据。** 在留出数据上，**9.8% 的真实已发表英文论文窗口、4.2% 的真实已发表中文论文
 窗口分数高于 0.5。** 单个高分窗口什么都不能说明。不存在"AI 百分比"这种量。
+
+<a id="results--结果"></a>
+<a id="results"></a>
+<a id="结果"></a>
 
 ## 结果
 
@@ -49,6 +63,10 @@
 
 完整记录（含容量扫描与逐特征贡献）：[`docs/TRAINING-REPORT.md`](docs/TRAINING-REPORT.md)。
 
+<a id="early-stopping-and-why-the-kept-model-is-not-the-argmin--早停为什么保留的不是最低点"></a>
+<a id="early-stopping-and-why-the-kept-model-is-not-the-argmin"></a>
+<a id="早停为什么保留的不是最低点"></a>
+
 ## 早停：为什么保留的不是最低点
 
 训练故意跑满 900 轮——远超有用的范围——好让停止的轮次是**测出来的**而不是宣称的。验证曲线在第
@@ -60,6 +78,10 @@
 "验证集分辨不出它和最优有什么区别"的最简模型，容量只有三分之一。
 
 ![容量扫描](docs/media/capacity-sweep.png)
+
+<a id="confounds-that-were-controlled-not-exploited--被控制掉的混淆而不是被利用的混淆"></a>
+<a id="confounds-that-were-controlled-not-exploited"></a>
+<a id="被控制掉的混淆而不是被利用的混淆"></a>
 
 ## 被控制掉的混淆，而不是被利用的混淆
 
@@ -80,6 +102,10 @@
 都保留——它们是 LLM 真实会产出的两种语域——机器类整体降权到与人类类持平。修复建议的方向一律取自
 数据实测，绝不写死"生成文本一定偏高/偏低"。
 
+<a id="what-the-model-found--模型发现了什么"></a>
+<a id="what-the-model-found"></a>
+<a id="模型发现了什么"></a>
+
 ## 模型发现了什么
 
 按总贡献排序的头部特征（方向为训练集上实测）：
@@ -97,6 +123,10 @@
 2. **数字密度是整套特征里最可靠、也最难在通读时发现的信号。** 生成文本读起来流畅、听起来具体；
    然后你去数数字，一个都没有。被标红的英文段落里 `digit_per_1k` 的中位数是 0，人类中位数是 49。
 
+<a id="corpus--语料"></a>
+<a id="corpus"></a>
+<a id="语料"></a>
+
 ## 语料
 
 论文只做标识，不做再分发。
@@ -109,6 +139,10 @@
 
 标识清单见 [`data/manifest_en.json`](data/manifest_en.json) 与
 [`data/manifest_zh.json`](data/manifest_zh.json)，任何能访问同样开放源的人都可以复现这份语料。
+
+<a id="limits--局限"></a>
+<a id="limits"></a>
+<a id="局限"></a>
 
 ## 局限
 
@@ -123,9 +157,11 @@
   特征上偏高，而原因与语域无关。
 - **这里没有任何东西能确立作者身份。**
 
+<a id="licence--许可"></a>
+<a id="licence"></a>
+<a id="许可"></a>
+
 ## 许可
 
 skill 源码不在此发布，见 [`LICENSE`](LICENSE)。
 `data/` 与 `docs/media/` 下的测量结果、模型与图表按 CC BY 4.0 发布，见 [`LICENSE-DATA`](LICENSE-DATA)。
-
-[English](README.md)
